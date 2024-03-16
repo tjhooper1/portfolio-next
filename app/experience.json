@@ -1,0 +1,18 @@
+{
+    "work": [
+        {
+            "id": "1",
+            "name": "Alaska Air",
+            "location": "Seattle, WA",
+            "date": "September 2022 - Present",
+            "position": "Software Engineer",
+            "description": "work1 description",
+            "responsibilities": [
+                "Supported new business initiatives in legacy .Net 4.1 MVCframework",
+                "Led various features to reduce call volume to our call center during irregular operations seasons.",
+                "Participated in modernization efforts to bring legacy code into .Net Core microservices.",
+                "Enhanced our React.js microsite to support more audiences"
+            ]
+        }
+    ]
+}
