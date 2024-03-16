@@ -35,6 +35,8 @@ const Chat = () => {
     const newUserMessage = { content: prompt, role: "user" };
     updateMessagesAndStorage(newUserMessage);
 
+    setInputValue("");
+
     const response = await fetch("/api/chat", {
       method: "POST",
       headers: {
@@ -46,7 +48,6 @@ const Chat = () => {
 
     if (!response.ok) {
       // Handle error
-      throw new Error("Something went wrong with the API :(");
       return;
     }
 
@@ -55,7 +56,6 @@ const Chat = () => {
     const openAiResponse = { content, role };
 
     updateMessagesAndStorage(openAiResponse);
-    e.target.reset();
   };
 
   const handleInputChange = (e) => {

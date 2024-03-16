@@ -1,21 +1,25 @@
 import { OpenAI } from "openai";
+import { readFileSync } from "fs";
+import path from "path";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
     // Extract the prompt from the request body
     const { messages: requestMessages } = req.body;
-
     // Assuming you have your OpenAI API key stored in your environment variables
     const OPENAI_KEY = process.env.OPENAI_KEY;
     const openai = new OpenAI({ apiKey: OPENAI_KEY });
+
+    const filePath = path.join(process.cwd(), "app", "tom.txt");
+    const initialPrompt = readFileSync(filePath, "utf-8");
+
     try {
       const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: [
           {
             role: "system",
-            content:
-              "You are Tom Hooper's assistant. You should let people know who Tom is. His favorite color is blue, and he's been a software engineer for 5 years.",
+            content: initialPrompt,
           },
           ...requestMessages,
         ],
