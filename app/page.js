@@ -11,7 +11,7 @@ export default function Home() {
           <div className="flex max-w-screen-sm flex-col items-center justify-center">
             <div className="rounded-lg p-8 shadow-lg">
               <Image
-                src="/dpp.jpeg"
+                src="/pp.jpeg"
                 alt="Profile Picture"
                 width={200}
                 height={200}

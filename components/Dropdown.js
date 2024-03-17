@@ -8,7 +8,7 @@ const Dropdown = ({ children }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center mb-3">
       <button
         onClick={toggleDropdown}
         className="mb-3 max-w-32 rounded bg-yellow-300 px-4 py-2 font-bold text-black hover:bg-yellow-400"

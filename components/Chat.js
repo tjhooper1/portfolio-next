@@ -67,6 +67,11 @@ const Chat = () => {
     textarea.style.height = textarea.scrollHeight + "px";
   };
 
+  const handleClearChat = () => {
+    setMessages([]);
+    localStorage.removeItem("messages");
+  }
+
   return (
     <div className="flex flex-col items-center p-3 md:border-l-2 md:border-gray-600">
       <div className="mb-3 flex gap-3 self-baseline">
@@ -120,13 +125,20 @@ const Chat = () => {
                 }
               }}
             />
-
-            <button
-              className="mt-3 w-24 rounded bg-yellow-300 p-2 hover:bg-yellow-400"
-              type="submit"
-            >
-              Send
-            </button>
+            <div className="flex h-16 gap-3">
+              <button
+                className="mt-3 w-24 rounded bg-yellow-300 p-2 hover:bg-yellow-400"
+                type="submit"
+              >
+                Send
+              </button>
+              <button
+                className="mt-3 w-24 rounded bg-red-400 p-2 hover:bg-yellow-400"
+                onClick={handleClearChat}
+              >
+                <p className="text-center">Clear chat</p>
+              </button>
+            </div>
           </div>
         </form>
       </div>

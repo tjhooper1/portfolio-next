@@ -1,18 +1,67 @@
 {
-    "work": [
-        {
-            "id": "1",
-            "name": "Alaska Air",
-            "location": "Seattle, WA",
-            "date": "September 2022 - Present",
-            "position": "Software Engineer",
-            "description": "work1 description",
-            "responsibilities": [
-                "Supported new business initiatives in legacy .Net 4.1 MVCframework",
-                "Led various features to reduce call volume to our call center during irregular operations seasons.",
-                "Participated in modernization efforts to bring legacy code into .Net Core microservices.",
-                "Enhanced our React.js microsite to support more audiences"
-            ]
-        }
-    ]
+  "work": [
+    {
+      "id": "1",
+      "name": "Alaska Air",
+      "location": "Seattle, WA",
+      "date": "September 2022 - Present",
+      "position": "Software Engineer",
+      "responsibilities": [
+        "Supported new business initiatives in legacy .Net 4.1 MVCframework",
+        "Led various features to reduce call volume to our call center during irregular operations seasons.",
+        "Participated in modernization efforts to bring legacy code into .Net Core microservices.",
+        "Enhanced our React.js microsite to support more audiences"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Nike",
+      "location": "Beaverton, OR",
+      "date": "March 2022 - September 2022",
+      "position": "Software Engineer",
+      "responsibilities": [
+        "Developed and deployed robust Node.js microservices for nike.com, focusing on performance and scalability.",
+        "Engaged in full-stack development with a strong emphasis on backend technologies, improving consumer-facing public applications.",
+        "Fully engaged in an organization effort to move services off American AWS to China AWS."
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Nelnet",
+      "location": "Lincoln, NE",
+      "date": "December 2021 - March 2022",
+      "position": "Software Engineer",
+      "responsibilities": [
+        "Optimized and refactored node backend microservices, significantly enhancing system efficiency and user interaction.",
+        "Made customer impacting enhancements to the interest rates services.",
+        "Regularly deployed node services to AWS lambdas and monitored logs.",
+        "Handled dead letter queues."
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Corestream",
+      "location": "Tampa, FL",
+      "date": "March 2021 - December 2021",
+      "position": "Software Engineer",
+      "responsibilities": [
+        "Participated in the backend development and restructuring of .Net microservices, ensuring high system availability under heavy load..",
+        "Worked effectively in a remote setup, ensuring clear communication and collaboration with team members.",
+        "Optimized inherited projects from consulting companies, improving performance and reducing technical debt."
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Beachfront Media",
+      "location": "Ormond Beach, FL",
+      "date": "June 2019 - March 2021",
+      "position": "Software Engineer",
+      "responsibilities": [
+        "Collaborated in the design and implementation of distributed systems for ad configuration management.",
+        "Participated in agile sprints and remote team discussions, contributing to complex problem-solving.",
+        "Worked with senior engineers to discover work and create stories.",
+        "Built small node services to handle failed ad deliveries, saving the company thousands a month in failed ads."
+      ]
+    }
+  ]
 }
