@@ -24,38 +24,38 @@ const Chat = () => {
     });
   }, []);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
+    // Prevent form submission if inputValue is empty or only contains whitespace
+    if (!inputValue.trim()) return;
 
-    const formData = new FormData(e.target);
-    const prompt = formData.get("prompt");
-
-    if (!prompt) return;
-
-    const newUserMessage = { content: prompt, role: "user" };
+    // Create the new user message using inputValue directly instead of using FormData
+    const newUserMessage = { content: inputValue.trim(), role: "user" };
     updateMessagesAndStorage(newUserMessage);
 
+    // Reset inputValue after the message is sent
     setInputValue("");
 
-    const response = await fetch("/api/chat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Make sure to use the most current state
-      body: JSON.stringify({ messages: [...messages, newUserMessage] }),
-    });
+    // Proceed with the API call
+    try {
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ messages: [...messages, newUserMessage] }),
+      });
 
-    if (!response.ok) {
-      // Handle error
-      return;
+      if (!response.ok) throw new Error("Network response was not ok.");
+
+      const data = await response.json();
+      const { content, role } = data.response.message;
+      const openAiResponse = { content, role };
+
+      // Update messages and storage with the assistant's response
+      updateMessagesAndStorage(openAiResponse);
+    } catch (error) {
+      console.error("Failed to fetch:", error);
     }
-
-    const data = await response.json();
-    const { content, role } = data.response.message;
-    const openAiResponse = { content, role };
-
-    updateMessagesAndStorage(openAiResponse);
   };
 
   const handleInputChange = (e) => {
@@ -91,20 +91,21 @@ const Chat = () => {
       })}
 
       <div className="flex w-full justify-around text-black">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="mt-3 flex w-full flex-col">
           <span
-            className={`pointer-events-none text-white ${charsLeft < 20 ? "inline-block" : "hidden"} `}
+            className={`pointer-events-none text-white ${charsLeft < 20 ? "inline-block" : "invisible"} `}
           >
             characters left: {charsLeft}
           </span>
           <div className="flex flex-col justify-center">
             <textarea
-              className="w-64 rounded-md p-2"
+              className="w-[400px] rounded-md p-2"
               style={{
                 overflowY: "hidden",
                 minHeight: "40px",
                 height: "auto",
                 resize: "none",
+                width: "100%",
               }}
               name="prompt"
               type="text"
@@ -112,6 +113,12 @@ const Chat = () => {
               placeholder="Ask about Tom"
               maxLength={maxLength}
               onChange={handleInputChange}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault(); // Prevent the default action to avoid inserting a new line
+                  handleSubmit(e); // Call your submit function
+                }
+              }}
             />
 
             <button
