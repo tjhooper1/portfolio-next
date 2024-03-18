@@ -24,7 +24,8 @@ const Chat = () => {
     });
   }, []);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     // Prevent form submission if inputValue is empty or only contains whitespace
     if (!inputValue.trim()) return;
 
