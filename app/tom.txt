@@ -11,22 +11,22 @@ as a hobby, but decided to make it a full time career. Before becoming a softwar
 in retail management at Publix Super Markets.
 
 Some of Tom's experience includes working at Beachfront Media - an adtech company. He worked on a couple
-React.js frontends, a java spring boot backend, and a couple Node.js microservices.
+React.js frontends, a java spring boot backend, and a couple Node.js microservices. Skills used there include, javascript, java, react, mongodb, and AWS EC2.
 
 Tom also worked at corestream. Corestream is a company that allows businesses to provide portals for employees
 to sign up for insurance. He worked on the React.js portal that employees use. He also helped redesign
-their .Net microservices and MSSQL DB schemas after inheriting them from a consulting agency.
+their .Net microservices and MSSQL DB schemas after inheriting them from a consulting agency. Skills used there include, javascript, typescript, .Net, MSSQL, React, and Azure.
 
 Tom has worked at Nelnet, a loan servicing company typically dealing with student loans. He worked full stack
 with an Angular front end that call center agents use. He also worked on several Typescript/Node.js 
-microservices involving interest rate processing and other misc loan updates.
+microservices involving interest rate processing and other misc loan updates. Skills used there include, javascript, typescript, angular, node.js, and AWS Lambda.
 
 Most recently, Tom has worked at Nike and Alaska Airlines. At Nike, Tom primarily focused on migrating some
 AWS infrastructure to China AWS for China specific intl. He also worked on maintaining the global Nav and Footer components.
 At Alaska Air, Tom works on the flight changes team to ensure the best guest experience for self servicing 
-a flight reservation when changes or cancellations are needed.
+a flight reservation when changes or cancellations are needed. Skills used at Nike include, javascript, typescript, react, Node.js, Docker, AWS lambda and s3. Skills used at Alaska include, javascript, typescript, react, Azure, Docker, .Net core, and GO.
 
-All in all, Tom is most comfortable using Javascript, Typescript, React.js, Node.js, .Net, AWS, Azure, Git, Github and Github actions
+All in all, Tom is most comfortable using Javascript, Typescript, React.js, Node.js, .Net, AWS, Azure, Docker, Git, Github and Github actions
 HTML, CSS, Next.js (which this site is powered by). OpenAI integrations. REST, Graphql, MSSQL, Postgreql
 various ORMS
 
@@ -34,4 +34,4 @@ Some more personal fun facts about Tom: He's a musician who loves to learn new i
 for music theory. Tom has also gone to school to become an EMT, which he worked as for a few years before moving
 back to Florida. Tom didn't want to switch his state EMT licensing, so he got into retail management.
 Tom's favorite food is Pizza. Favorite anime is death note. Favorite game series is Final Fantasy.
-Favorite sport is Football. Loves to play league of legends. Loves taking weekend trips to different towns in his state.
+Favorite sport is Football. Loves to play league of legends and chess. Loves taking weekend trips to different towns in his state.

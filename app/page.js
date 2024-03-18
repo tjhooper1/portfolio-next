@@ -24,8 +24,8 @@ export default function Home() {
             <hr />
             <h2 className="mb-3 text-xl font-bold">Skills</h2>
             <p className="mb-3">
-              Javascript, Typescript, C#, Java, HTML, CSS, React.js, Redux,
-              .Net, Node.js AWS, Azure, SQL, MongoDB, Git, Jira, Agile
+              Javascript, Typescript, C#, Java, Python, HTML, CSS, React.js, Next.js Redux,
+              .Net Core, Node.js AWS, Azure, SQL, MongoDB, Docker, Git, Jira, Agile
             </p>
             <h2 className="m-3 text-2xl font-medium text-yellow-400">
               Experience
