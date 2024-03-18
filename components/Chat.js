@@ -59,6 +59,7 @@ const Chat = () => {
   };
 
   const handleInputChange = (e) => {
+    e.preventDefault();
     const textarea = e.target;
     if (textarea.value.length <= maxLength) {
       setInputValue(textarea.value);
