@@ -6,6 +6,7 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     // Extract the prompt from the request body
     const { messages: requestMessages } = req.body;
+    console.log("New Message! :D", requestMessages.at(-1))
     // Assuming you have your OpenAI API key stored in your environment variables
     const OPENAI_KEY = process.env.OPENAI_KEY;
     const openai = new OpenAI({ apiKey: OPENAI_KEY });
